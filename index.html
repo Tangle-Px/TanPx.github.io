@@ -23,6 +23,13 @@
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
 
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+ 
+
 </head>
 
 <body id="page-top">
@@ -42,13 +49,11 @@
                         <a class="nav-link me-lg-3" href="#page-top">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
+                        <a class="nav-link me-lg-3" href="#writing">Writing</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="docs/Congrui_Yin_CV.pdf">CV</a>
+                        <a class="nav-link me-lg-3" href="docs/Vita.pdf">CV</a>
                     </li>
 
                 </ul>
@@ -89,29 +94,39 @@
     </section>
     <!-- Home -->
 
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+    <!-- Writing -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="writing">
         <div class="container px-5">
             <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
+                <h2 id="writings-subtitle">
+                    <i class="bi bi-file-text-fill"></i>&nbsp;Quantum Group and Coboundary Category 
+                    <a href="docs/Quantum_group_and_Coboundary_Category.pdf">pdf</a>
+                    <a href="#" id="toggle-abstract">abstract</a>
+                </h2>
             </header>
-            <div class="main-body" id="publications-md"></div>
-
+        
+            <div class="hidden" id="abstract">
+                <p>
+                    This project is about Quantum Group and its representation. We review the basic theory of Hopf algebra and study the Quantum Group \(U_q(\mathfrak{g})\). In particular, we study the category \(\mathcal{O}\), category of the module with root decomposition, for representation of Quantum Group and crystal base to understand the representation of \(U_q(\mathfrak{g})\) when \(q \rightarrow 0\). We also study the monoidal category of crystal base and the coboundary structure in this category.
+                </p>
+            </div>
+        
+            <script>
+                document.getElementById('toggle-abstract').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var abstractDiv = document.getElementById('abstract');
+                    if (abstractDiv.classList.contains('hidden')) {
+                        abstractDiv.classList.remove('hidden');
+                    } else {
+                        abstractDiv.classList.add('hidden');
+                    }
+                });
+            </script>
         </div>
-    </section>
-    <!-- Publications  -->
 
-    <!-- Awards -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
-
-        </div>
     </section>
-    <!-- Awards -->
+    <!-- Wrting  -->
+
 
 
     <!-- Footer-->
