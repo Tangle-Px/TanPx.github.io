@@ -61,23 +61,7 @@
         </div>
     </nav>
 
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/MIT.png');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2 id="top-section-bg-text" class="text-white display-3 lh-1 mb-4 font-alt"></h2>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="user-photo photo"><img class="shadow"
-                                src="static/assets/img/photo.jpg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Top Section -->
+  
 
 
     <!-- Home -->
@@ -96,35 +80,80 @@
 
     <!-- Writing -->
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="writing">
+        <!-- First Project -->
         <div class="container px-5">
             <header>
                 <h2 id="writings-subtitle">
                     <i class="bi bi-file-text-fill"></i>&nbsp;Quantum Group and Coboundary Category 
                     <a href="docs/Quantum_group_and_Coboundary_Category.pdf">pdf</a>
-                    <a href="#" id="toggle-abstract">abstract</a>
+                    <a href="#" id="toggle-abstract-1">abstract</a>
                 </h2>
             </header>
-        
-            <div class="hidden" id="abstract">
+            <div class="hidden" id="abstract-1">
                 <p>
                     This project is about Quantum Group and its representation. We review the basic theory of Hopf algebra and study the Quantum Group \(U_q(\mathfrak{g})\). In particular, we study the category \(\mathcal{O}\), category of the module with root decomposition, for representation of Quantum Group and crystal base to understand the representation of \(U_q(\mathfrak{g})\) when \(q \rightarrow 0\). We also study the monoidal category of crystal base and the coboundary structure in this category.
                 </p>
             </div>
-        
-            <script>
-                document.getElementById('toggle-abstract').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var abstractDiv = document.getElementById('abstract');
-                    if (abstractDiv.classList.contains('hidden')) {
-                        abstractDiv.classList.remove('hidden');
-                    } else {
-                        abstractDiv.classList.add('hidden');
-                    }
-                });
-            </script>
         </div>
-
+    
+        <!-- Second Project -->
+        <div class="container px-5">
+            <header>
+                <h2 id="writings-subtitle">
+                    <i class="bi bi-file-text-fill"></i>&nbsp;Quiver Representation and Coherent Sheaf of Projective Line
+                    <a href="docs/Quiver_Representation_and_Coherent_sheaf_of_Projective_Line.pdf">pdf</a>
+                    <a href="#" id="toggle-abstract-2">abstract</a>
+                </h2>
+            </header>
+            <div class="hidden" id="abstract-2">
+                <p>
+                    This project is about quiver representation and its connection to the derived category of coherent sheaf via Tilting theory. We in particular study the Beilinson's thesis about the derived equivalence between Kronecker quiver and coherent sheaves of \(\mathbb{P}^1\).
+                </p>
+            </div>
+        </div>
+    
+        <!-- Third Project -->
+        <div class="container px-5">
+            <header>
+                <h2 id="writings-subtitle">
+                    <i class="bi bi-file-text-fill"></i>&nbsp;A Beginner's Guide on Support Theory via Tensor Triangulated Category
+                    <a href="docs/z.pdf">pdf</a>
+                    <a href="#" id="toggle-abstract-3">abstract</a>
+                </h2>
+            </header>
+            <div class="hidden" id="abstract-3">
+                <p>
+                    This thesis introduces the support theory developed by A. Neeman, M. Hopkins, Paul Balmer, and Greg Stevenson. The thesis consists of three sections: the first section reviews the classic theory about the Balmer spectrum of small tensor triangulated categories. The second section drops the condition of "small" and focuses on the case where \(\mathcal{K}\) is a rigidly-compactly generated tensor triangulated category. It explores how to generalize the support data of the compact object to new support data of the whole category using the Rickard idempotent. The last section is based on the theory developed by Greg Stevenson, applying the new support data to the "module" over \(\mathcal{C}\) and using it to classify the localizing subcategory of \(\mathcal{K}\).
+                </p>
+            </div>
+        </div>
+    
+        <!-- JavaScript for toggling visibility -->
+        <script>
+            document.getElementById('toggle-abstract-1').addEventListener('click', function(event) {
+                event.preventDefault();
+                var abstractDiv = document.getElementById('abstract-1');
+                abstractDiv.classList.toggle('hidden');
+            });
+    
+            document.getElementById('toggle-abstract-2').addEventListener('click', function(event) {
+                event.preventDefault();
+                var abstractDiv = document.getElementById('abstract-2');
+                abstractDiv.classList.toggle('hidden');
+            });
+    
+            document.getElementById('toggle-abstract-3').addEventListener('click', function(event) {
+                event.preventDefault();
+                var abstractDiv = document.getElementById('abstract-3');
+                abstractDiv.classList.toggle('hidden');
+            });
+        </script>
+    
+        <!-- MathJax for LaTeX rendering -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </section>
+    
     <!-- Wrting  -->
 
 
